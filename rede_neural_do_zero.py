@@ -11,7 +11,12 @@
 # Como rodar: python rede_neural_do_zero.py   (ou cole no Google Colab)
 # =============================================================================
 
+import sys
 import numpy as np
+
+# No Windows o terminal usa a codificação antiga (cp1252), que não tem
+# acentos nem emojis. Isto força UTF-8 na saída.
+sys.stdout.reconfigure(encoding="utf-8")
 
 np.random.seed(42)  # semente fixa: os resultados ficam iguais toda vez que rodar
 
